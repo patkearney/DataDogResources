@@ -1,0 +1,8 @@
+init_config:
+
+instances:
+  - host: . # "." means the current host
+    sites: PFaroeWebSite
+    tags:
+       - #{Octopus.Machine.Roles}
+       - #{Octopus.Environment.Name}
