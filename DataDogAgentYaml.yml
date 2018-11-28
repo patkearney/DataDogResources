@@ -4,5 +4,7 @@ instances:
   - host: . # "." means the current host
     sites: PFaroeWebSite
     tags:
-       - #{Octopus.Machine.Roles}
+      #{each role in Octopus.Machine.Roles}
+       - #{role}
+      #{/each}
        - #{Octopus.Environment.Name}
